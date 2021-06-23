@@ -50,12 +50,13 @@ class Rectangle:
         return (self.__height + self.__width) * 2
 
     def __str__(self):
+        """ returns a printable string when print is called """
         ch = ""
         if self.__width == 0 or self.__height == 0:
             return ch
-        for j in range(self.__height):
-            for i in range(self.__width):
-                ch += "#"
+        for i in range(self.__height):
+            for j in range(self.__width):
+                ch += str(self.print_symbol)
             if j < self.__height - 1:
                 ch += '\n'
         return ch
