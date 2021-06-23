@@ -1,4 +1,4 @@
-B#!/usr/bin/python3
+#!/usr/bin/python3
 """
 Rectangle module
 """
@@ -6,10 +6,13 @@ Rectangle module
 
 class Rectangle:
     """ class Rectangle """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """ instantiation """
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
