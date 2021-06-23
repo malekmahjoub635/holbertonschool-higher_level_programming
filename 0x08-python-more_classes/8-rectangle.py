@@ -6,10 +6,15 @@ Rectangle module
 
 class Rectangle:
     """ class Rectangle """
+    number_of_instances = 0
+
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """ instantiation """
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -55,7 +60,7 @@ class Rectangle:
             return ch
         for j in range(self.__height):
             for i in range(self.__width):
-                ch += "#"
+                ch += str(self.print_symbol)
             if j < self.__height - 1:
                 ch += '\n'
         return ch
