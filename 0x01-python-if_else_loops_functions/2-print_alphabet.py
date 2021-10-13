@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for az in range(97, 123):
-   print("{:c}".format(az), end='')
+for c in range(97, 123):
+   print("{:c}".format(c), end="")
