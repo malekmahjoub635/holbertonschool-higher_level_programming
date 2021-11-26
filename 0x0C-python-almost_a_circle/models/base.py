@@ -47,8 +47,7 @@ class Base:
     def create(cls, **dictionary):
         """ Create a Rectangle or Square instance with “dummy” """
         if cls.__name__ == "Rectangle":
-            dummy = cls(1, 2)
-            dummy.update(**dictionary)
+            dummy = cls(1, 1)
         else:
             dummy = cls(1)
             dummy.update(**dictionary)
